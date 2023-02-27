@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    
+    <div id="payment-container">
+        <div id="buttons">
+            <button id="cash" type="button">Cash</button>
+            <button id="credit" type="button">Credit</button>
+        </div>
+
+        <div id="payment-forms">
+            <form id="cash-payment">
+                <label for="amount-tendered">Cash Paid</label>
+                <input id="cash-paid">
+                <button id="make-change" type="button">Return Change</button>
+            </form>
+        
+            <form id="credit-form">
+                <input name="credit-number" class="cc-number" type="tel" pattern="\d*" maxlength="19" placeholder="Card Number">
+                <input name="credit-expires" class="cc-expires" type="tel" pattern="\d*" maxlength="7" placeholder="MM / YY">
+                <input name="credit-cvc" class="cc-cvc" type="tel" pattern="\d*" maxlength="4" placeholder="CVC">
+            </form>
+    </div>
+    
+   
+</div>
+</body>
+</html>

@@ -5,12 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bakery POS</title>
+    <link rel="stylesheet" href="pos.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        <h1>Bakery Title</h1>
+        <nav>
+            <ul>
+                <li><a href="#cookie-section">Cookies</a></li>
+                <li><a href="#donut-section">Donuts</a></li>
+                <li><a href="#pie-section">Pies</a></li>
+                <li><a href="#cart-section">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <section class="cookies">
-            <h2 class="section-header">Cookies</h2>
+        <section id = "cookie-section" class="cookies">
+            <h3 class="section-header">Cookies</h3>
             <div class="shop-items">
                 <div class="individual-shop-item">
                     <span class="shop-item-title">Chocolate Chip</span>
@@ -47,8 +58,8 @@
             </div>
 
         </section>
-        <section class="donuts">
-            <h2 class="section-header">Donuts</h2>
+        <section id="donut-section"class="donuts">
+            <h3 class="section-header">Donuts</h3>
             <div class="shop-items">
                 <div class="individual-shop-item">
                     <span class="shop-item-title">Chocolate Glazed</span>
@@ -84,8 +95,8 @@
                 </div>
             </div>
         </section>
-        <section class="pies">
-            <h2 class="section-header">Pies</h2>
+        <section id="pie-section" class="pies">
+            <h3 class="section-header">Pies</h3>
             <div class="shop-items">
                 <div class="individual-shop-item">
                     <span class="shop-item-title">Apple</span>
@@ -122,8 +133,8 @@
             </div>
         </section>
 
-        <section class="cart">
-            <h2 class="section-header">Cart</h2>
+        <section id="cart-section" class="cart">
+            <h3 class="section-header">Cart</h3>
             <div class="cart-specs">
                 <span class="cart-item">Item</span>
                 <span class="cart-price">Price</span>

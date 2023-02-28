@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+ul {
+    list-style: none;
+}
+li {
+    padding: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color:black;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color:teal;
+}
+a:active {
+    color:aliceblue;
+}
+.shop-items {
+    display: flex;
+}
+.individual-shop-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border: 2px solid orange;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+}
+
+}

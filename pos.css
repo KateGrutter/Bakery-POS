@@ -37,8 +37,19 @@ a:active {
     flex-direction: column;
     margin: 10px;
     border: 2px solid orange;
+    background-color: white;
 }
-
+button {
+    background-color: orange;
+    border-radius: 4px;
+    border: 2px solid orange;
+    color: white;
+    padding: 5px 15px;
+}
+img {
+    height: 100px;
+    width: 100px;
+}
 
 
 @media only screen and (min-width: 768px) {

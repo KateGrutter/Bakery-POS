@@ -1,6 +1,0 @@
-const inventory = [
-    {
-        type: 'Cookie'
-
-    }
-]

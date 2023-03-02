@@ -1,3 +1,5 @@
+(function() {
+
 const removeCartItemButtons = document.getElementsByClassName('remove-button');
 for (let i = 0; i < removeCartItemButtons.length; i++) {
     const button = removeCartItemButtons[i];
@@ -48,7 +50,7 @@ function addItemToCart(title, price, imgSrc) {
     const cartRow = document.createElement('div');
     const cartItems = document.getElementsByClassName('cart-items')[0]
     const cartItemNames = cartItems.getElementsByClassName('cart-item-title')
-    for (const i = 0; i < cartItemNames.length; i++){
+    for (let i = 0; i < cartItemNames.length; i++){
         if (cartItemNames[i].innerText == title) {
         return
         }
@@ -61,7 +63,7 @@ function addItemToCart(title, price, imgSrc) {
     </div>
     <span class="cart-price cart-column">${price}</span>
     <div class="cart-quantity cart-column">
-        <input class="cart-quantity-input" type="number" value="1" min="1">
+        <input class="cart-quantity-input" type="number" value="1">
         <button class="remove-button" type="button">REMOVE</button>
     </div>
     `
@@ -78,15 +80,18 @@ function addItemToCart(title, price, imgSrc) {
 function updateCartTotal() {
     const cartItems = document.getElementsByClassName('cart-items')[0];
     const cartRows = cartItems.getElementsByClassName('cart-row');
-    const total = 0
+    let total = 0;
     for (let i = 0; i < cartRows.length; i++) {
         const cartRow = cartRows[i];
         const cartPrice = cartRow.getElementsByClassName('cart-price')[0];
-        const cartQuantity = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        const cartQuantity = cartRow.getElementsByClassName('cart-quantity-input')[0];
         const price = parseFloat(cartPrice.innerText.replace('$', ''));
+        console.log(price)
         const quantity = cartQuantity.value
         total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total')[0].innerText = '$' + total
 }
+
+})()

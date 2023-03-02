@@ -1,0 +1,6 @@
+const inventory = [
+    {
+        type: 'Cookie'
+
+    }
+]

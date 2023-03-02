@@ -83,6 +83,11 @@ a.checkout-button {
         flex-direction: row;
         justify-content: space-between;
     }
+    main {
+        display: flex;
+        ;
+    }
+    /* START HERE TOMORROW!!!! (MAIN) */
 ul {
     list-style: none;
     display: flex;

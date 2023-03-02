@@ -78,8 +78,9 @@ function addItemToCart(title, price, imgSrc) {
 
 
 function updateCartTotal() {
-    const cartItems = document.getElementsByClassName('cart-items')[0];
+    // const cartItems = document.getElementsByClassName('cart-items')[0];
     const cartRows = cartItems.getElementsByClassName('cart-row');
+    console.log(cartRows)
     let total = 0;
     for (let i = 0; i < cartRows.length; i++) {
         const cartRow = cartRows[i];

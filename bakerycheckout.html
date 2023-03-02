@@ -5,15 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="bakerycheckout.css">
 </head>
 
 <body>
-
-<link rel="stylesheet" href="bakerycheckout.css">
-
 <form id="Bakery">
     <section class="container content-section">
-        <h2 class="section-header">Cart</h2>
+        <h2 class="section-header">Your Order</h2>
         <div class="cart-items">
         </div>
         <div class="subtotal">
@@ -30,35 +28,27 @@
         </div>
 <div id="cashOrCardDiv">
         <div id="cashOrCard">
-            <div id="cashDiv">
-                <input type="radio" name="cc" id="cash" value="cash" >
-                <label for="cash">Cash</label>
-            </div>
-            <div id="cardDiv">
-                <input type="radio" name="cc" id="card" value="card" >
-                <label for="card">Card</label>
-            </div>
+                <button type="button" id="cash" value="cash">Cash</button>
+                <button type="button" id="card" value="card">Card</button>
         </div>
         
-        <div id="ifCash">
+        <div id="ifCash" style="display: none">
                 <div class="cashBoxes" id="amtInp">
                     <label for="cashAmt">Amount Paid:</label>
-                    <input id="cashAmt" type="number" placeholder="$$">
+                    <span>$ </span><input id="cardNum" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  placeholder="0.00">
                 </div>
         
                 <div class="cashBoxes" id="change">
+                    <button id="make-change" type="button">Make Change</button>
                     <p>Change: </p>
                 </div>
+                
         </div>
         
-        <div id="ifCard">
-            <div class="cardInfo">
-                <p id="cardAmt">Amount:</p>
-                
-            </div>
+        <div id="ifCard" style="display: none">
             <div class="cardInfo" id="cardInfo">
                 <label for="cardNum">Card Number: </label>
-                <input id="cardNum" maxlength= "19" type="text" placeholder="Card Number">
+                <input id="cardNum" maxlength= "19" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  placeholder="Card Number">
             </div>
                 
             <div class="cardInfo" id="cvvExp">
@@ -69,19 +59,19 @@
         
                 <div id="cvvDiv">
                     <label for="cvv">CVV</label>
-                    <input id="cvv" maxlength= "3" type="text" placeholder="CVV">
+                    <input id="cvv" maxlength= "4" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="CVV">
                 </div>
             </div>
         </div>
         <div>
-        <button id="subBut" class="btn btn-primary btn-purchase" type="submit">Purchase</button>
+        <button id="subBut" class="btn btn-primary btn-purchase" type="button">Purchase</button>
     </div>
     </section>
 </form>
 </div>
 
 
-    <div id="rec">
+    <div id="rec" style="display: none">
         <div>
             <h1>Thank you for your purchase!</h1>
             <h3 class="par" id="recItems">Items Purchased: </h3>  
@@ -90,6 +80,6 @@
             <p class="par" id="recTot">Total: </p>  
         </div>
     </div>
-
+<script src="./bakerycheckout.js"></script>
 </body> 
 </html>

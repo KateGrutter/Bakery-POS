@@ -132,6 +132,15 @@ const addToCart = (event) => {
     cartItem.append(cartDiv);
 
 
+    //functionally removes cart-item but doesn't update the total
+
+    removeButton.addEventListener('click', (event) => {
+        const cartThing = event.target.parentNode;
+        cartThing.remove();
+        updateTotal()
+    })
+
+
     updateTotal()
 }
 const buttons = document.querySelectorAll('.add-to-cart-button');
@@ -143,15 +152,7 @@ for (let button of buttons){
 
 //Have to make a function to make remove buttons active
 
-// const removeFromCart = (event) => {
-//     const cartItem = document.querySelector('.cart-item');
-//     cartItem.remove(item)
-// }
 
-// const removeButton = document.querySelectorAll('.remove-button');
-// for(removeButton of buttons){
-//     removeButton.addEventListener('click', removeFromCart)
-// }
 
 
 

@@ -1,33 +1,32 @@
 (function () {
-
 const inventory = [
     {
         category: 'Cookie',
         name:'Chocolate Chip',
         price: 1.00,
-        description: 'Classic Milk Chocolate Chip Cookie',  
-        image:  /// all descriptions are placeholders for now
+        description: 'Classic Milk Chocolate Chip Cookie',  /// all descriptions are placeholders for now
+        id: 'choc-chip'
     },
     {
         category: 'Cookie',
         name:'Peanut Butter',
         price: 1.00,
         description: 'Pure Peanut Butter Heaven',
-        
-
+        id: 'pb',
     },
     {
         category: 'Cookie',
         name: 'Double Chocolate',
         price: 1.25,
-        description: 'Double the Decadance, Double the Chocolate'
-        
+        description: 'Double the Decadance, Double the Chocolate',
+        id: 'dbl-choc'
     },
     {
         category: 'Cookie',
         name: 'White Chocolate',
         price: 1.75,
-        description: 'White Chocolate Wonderfulness'
+        description: 'White Chocolate Wonderfulness',
+        id: 'w-choc'
 
     },
     {
@@ -35,12 +34,14 @@ const inventory = [
         name: 'Chocolate Glazed',
         price: 1.00,
         description: 'yup',
+        id: 'choc-glazed'
     },
     {
         category: 'Donuts',
         name: 'Powdered Sugar',
         price: 1.00,
         description: 'yum',
+        id: 'pow-sug'
 
     },
     {
@@ -48,6 +49,7 @@ const inventory = [
         name: 'Apple Fritter',
         price: 1.50,
         description: 'fritter-tastic',
+        id: 'fritter'
         
     },
     {
@@ -55,13 +57,14 @@ const inventory = [
         name: 'Cinnamon Roll',
         price: 1.75,
         description: 'roll it up',
-
+        id: 'roll'
     },
     {
         category: 'Pies',
         name: 'Apple',
         price: 10.00,
         description: "'Merica",
+        id: 'apple'
 
     },
     {
@@ -69,6 +72,7 @@ const inventory = [
         name: 'Cherry',
         price: 10.00,
         description: 'very cherry',
+        id: 'cherry'
 
     },
 
@@ -77,18 +81,18 @@ const inventory = [
         name: 'Key Lime',
         price: 12.00,
         description: 'key to happiness',
+        id: 'key'
     },
     {
         category: 'Pies',
         name: 'Pecan',
         price: 12.00,
         description: 'you can pecan',
+        id: 'pecan'
 
     }
 ]
-
-
-})();
+const cart = [];
 
 const addToCart = (event) => {
     const grabInventory = inventory.find(food => food.id === event.target.id);
@@ -117,4 +121,12 @@ const buttons = document.querySelectorAll('.add-to-cart-button');
 
 for (let button of buttons){
     button.addEventListener('click', addToCart)
+};
+
+function updateTotal() {
+    let total = 0;
+    cart.forEach((item) => (total += item.price));
+    document.querySelector('.total').innerText = `Total: $${total}`;
+
 }
+})();

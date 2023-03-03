@@ -5,7 +5,8 @@ const inventory = [
         name:'Chocolate Chip',
         price: 1.00,
         description: 'Classic Milk Chocolate Chip Cookie',  /// all descriptions are placeholders for now
-        id: 'choc-chip'
+        id: 'choc-chip',
+        
     },
     {
         category: 'Cookie',
@@ -96,25 +97,27 @@ const cart = [];
 
 const addToCart = (event) => {
     const grabInventory = inventory.find(food => food.id === event.target.id);
-    cart.push(item);
+    cart.push(grabInventory);
     const cartDiv = document.createElement('div');
     cartDiv.classList.add('cart-item');
     const image = document.createElement('img');
     image.src = grabInventory.image;
     image.classList.add('item-image');
     const titleSpan = document.createElement('span');
-    titleSpan.innerText = grabInventory.title;
+    titleSpan.innerText = grabInventory.name;
     const priceSpan = document.createElement('span');
     priceSpan.innerText = `${grabInventory.price}`;
     const removeButton = document.createElement('button');
-    removeButton.innerText('Remove')
+    removeButton.innerText = 'Remove';
 
-    itemDiv.append(image);
-    itemDiv.append(titleSpan);
-    itemDiv.append(priceSpan);
-    itemDiv.append(removeButton);
+    cartDiv.append(image);
+    cartDiv.append(titleSpan);
+    cartDiv.append(priceSpan);
+    cartDiv.append(removeButton);
 
-    document.querySelectorAll('#cart-item').append(itemDiv);
+    const cartItem = document.querySelector('.cart-items');
+    console.log(cartItem)
+    cartItem.append(cartDiv);
     updateTotal()
 }
 const buttons = document.querySelectorAll('.add-to-cart-button');
@@ -126,7 +129,7 @@ for (let button of buttons){
 function updateTotal() {
     let total = 0;
     cart.forEach((item) => (total += item.price));
-    document.querySelector('.total').innerText = `Total: $${total}`;
+    document.querySelector('.cart-total-price').innerText = `Total: $${total}`;
 
 }
 })();

@@ -82,9 +82,7 @@ const inventory = [
 
     }
 ]
-const cart = [];
 
 
-for (let button of buttons){
-    button.addEventListener('click', addToCart)
-}
+})();
+

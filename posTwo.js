@@ -1,3 +1,4 @@
+(function () {
 const inventory = [
     {
         category: 'Cookie',
@@ -128,3 +129,4 @@ function updateTotal() {
     document.querySelector('.total').innerText = `Total: $${total}`;
 
 }
+})();

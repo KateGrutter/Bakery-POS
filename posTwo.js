@@ -90,3 +90,31 @@ const inventory = [
 
 })();
 
+const addToCart = (event) => {
+    const grabInventory = inventory.find(food => food.id === event.target.id);
+    cart.push(item);
+    const cartDiv = document.createElement('div');
+    cartDiv.classList.add('cart-item');
+    const image = document.createElement('img');
+    image.src = grabInventory.image;
+    image.classList.add('item-image');
+    const titleSpan = document.createElement('span');
+    titleSpan.innerText = grabInventory.title;
+    const priceSpan = document.createElement('span');
+    priceSpan.innerText = `${grabInventory.price}`;
+    const removeButton = document.createElement('button');
+    removeButton.innerText('Remove')
+
+    itemDiv.append(image);
+    itemDiv.append(titleSpan);
+    itemDiv.append(priceSpan);
+    itemDiv.append(removeButton);
+
+    document.querySelectorAll('#cart-item').append(itemDiv);
+    updateTotal()
+}
+const buttons = document.querySelectorAll('.add-to-cart-button');
+
+for (let button of buttons){
+    button.addEventListener('click', addToCart)
+}

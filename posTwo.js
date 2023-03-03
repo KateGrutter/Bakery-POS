@@ -6,6 +6,7 @@ const inventory = [
         price: 1.00,
         description: 'Classic Milk Chocolate Chip Cookie',  /// all descriptions are placeholders for now
         id: 'choc-chip',
+        image: "assets/food-photographer-jennifer-pallian-OfdDiqx8Cz8-unsplash.jpg",
         
     },
     {
@@ -14,20 +15,23 @@ const inventory = [
         price: 1.00,
         description: 'Pure Peanut Butter Heaven',
         id: 'pb',
+        image: "assets/priscilla-du-preez--Y-qg-ncD34-unsplash.jpg",
     },
     {
         category: 'Cookie',
         name: 'Double Chocolate',
         price: 1.25,
         description: 'Double the Decadance, Double the Chocolate',
-        id: 'dbl-choc'
+        id: 'dbl-choc',
+        image: "assets/julissa-capdevilla-HHee8b4ZAlU-unsplash.jpg"
     },
     {
         category: 'Cookie',
         name: 'White Chocolate',
         price: 1.75,
         description: 'White Chocolate Wonderfulness',
-        id: 'w-choc'
+        id: 'w-choc',
+        image: "assets/morgane-perraud-XhrW0XlRy8c-unsplash.jpg"
 
     },
     {
@@ -35,14 +39,16 @@ const inventory = [
         name: 'Chocolate Glazed',
         price: 1.00,
         description: 'yup',
-        id: 'choc-glazed'
+        id: 'choc-glazed',
+        image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1664&q=80'
     },
     {
         category: 'Donuts',
         name: 'Powdered Sugar',
         price: 1.00,
         description: 'yum',
-        id: 'pow-sug'
+        id: 'pow-sug',
+        image: "assets/no-revisions-vUSfCfuq-2Y-unsplash.jpg"
 
     },
     {
@@ -50,7 +56,8 @@ const inventory = [
         name: 'Apple Fritter',
         price: 1.50,
         description: 'fritter-tastic',
-        id: 'fritter'
+        id: 'fritter',
+        image: "assets/katherine-sousa-k2UM3jOgmGI-unsplash.jpg"
         
     },
     {
@@ -58,14 +65,16 @@ const inventory = [
         name: 'Cinnamon Roll',
         price: 1.75,
         description: 'roll it up',
-        id: 'roll'
+        id: 'roll',
+        image: "assets/andy-hay-1uaIZcCJ-H0-unsplash.jpg"
     },
     {
         category: 'Pies',
         name: 'Apple',
         price: 10.00,
         description: "'Merica",
-        id: 'apple'
+        id: 'apple',
+        image: "assets/kavya-p-k-zQ4jrYelvLs-unsplash.jpg"
 
     },
     {
@@ -73,7 +82,8 @@ const inventory = [
         name: 'Cherry',
         price: 10.00,
         description: 'very cherry',
-        id: 'cherry'
+        id: 'cherry',
+        image: "assets/marie-g-geri6ml5e2I-unsplash.jpg"
 
     },
 
@@ -82,14 +92,16 @@ const inventory = [
         name: 'Key Lime',
         price: 12.00,
         description: 'key to happiness',
-        id: 'key'
+        id: 'key',
+        image: "assets/kaouther-djouada-j8ufR4H4PaE-unsplash.jpg"
     },
     {
         category: 'Pies',
         name: 'Pecan',
         price: 12.00,
         description: 'you can pecan',
-        id: 'pecan'
+        id: 'pecan',
+        image: "assets/keighla-exum-wnn9GuvXIZ4-unsplash.jpg"
 
     }
 ]

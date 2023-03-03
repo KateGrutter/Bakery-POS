@@ -5,19 +5,23 @@ const inventory = [
         category: 'Cookie',
         name:'Chocolate Chip',
         price: 1.00,
-        description: 'Classic Milk Chocolate Chip Cookie',  /// all descriptions are placeholders for now
+        description: 'Classic Milk Chocolate Chip Cookie',  
+        image:  /// all descriptions are placeholders for now
     },
     {
         category: 'Cookie',
         name:'Peanut Butter',
         price: 1.00,
-        description: 'Pure Peanut Butter Heaven'
+        description: 'Pure Peanut Butter Heaven',
+        
+
     },
     {
         category: 'Cookie',
         name: 'Double Chocolate',
         price: 1.25,
         description: 'Double the Decadance, Double the Chocolate'
+        
     },
     {
         category: 'Cookie',

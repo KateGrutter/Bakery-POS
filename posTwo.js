@@ -106,8 +106,9 @@ const addToCart = (event) => {
     const titleSpan = document.createElement('span');
     titleSpan.innerText = grabInventory.name;
     const priceSpan = document.createElement('span');
-    priceSpan.innerText = `${grabInventory.price}`;
+    priceSpan.innerText = `$${grabInventory.price}`;
     const removeButton = document.createElement('button');
+    removeButton.classList.add('remove-button');
     removeButton.innerText = 'Remove';
 
     cartDiv.append(image);
@@ -116,8 +117,9 @@ const addToCart = (event) => {
     cartDiv.append(removeButton);
 
     const cartItem = document.querySelector('.cart-items');
-    console.log(cartItem)
     cartItem.append(cartDiv);
+
+
     updateTotal()
 }
 const buttons = document.querySelectorAll('.add-to-cart-button');
@@ -126,10 +128,29 @@ for (let button of buttons){
     button.addEventListener('click', addToCart)
 };
 
+
+//Have to make a function to make remove buttons active
+
+// const removeFromCart = (event) => {
+//     const cartItem = document.querySelector('.cart-item');
+//     cartItem.remove(item)
+// }
+
+// const removeButton = document.querySelectorAll('.remove-button');
+// for(removeButton of buttons){
+//     removeButton.addEventListener('click', removeFromCart)
+// }
+
+
+
+
 function updateTotal() {
     let total = 0;
     cart.forEach((item) => (total += item.price));
     document.querySelector('.cart-total-price').innerText = `Total: $${total}`;
 
 }
+
+
+
 })();

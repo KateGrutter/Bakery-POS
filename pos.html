@@ -157,10 +157,84 @@
             <div class="cart-total-title">Total
                 <span class="cart-total-price">$0</span>
             </div>
-            <button role="button"> <a href="bakerycheckout.html" target="_blank" class="checkout-button">Check Out</a></button>
-
+            <button role="button" id="open-checkout""> Check Out</button>
+<!-- <a href="bakerycheckout.html" target="_blank" class="checkout-button"></a> -->
 
         </section>
+        
+       <!--Bakery checkout html copied under here-->
+
+       <form class="checkout-popup">
+        <section class="container content-section">
+            <h2 class="section-header">Your Order</h2>
+            <div class="cart-items">
+            </div>
+            <div class="subtotal">
+                <strong class="subtotal-title">Subtotal: </strong>
+                <span class="subtotal-total-price">$0</span>
+            </div>
+            <div class="sales-tax">
+                <strong class="sales-tax-title">Sales-Tax: </strong>
+                <span class="sales-tax-price"> $0</span>
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total:</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+    <div id="cashOrCardDiv">
+            <div id="cashOrCard">
+                    <button type="button" id="cash" value="cash">Cash</button>
+                    <button type="button" id="card" value="card">Card</button>
+            </div>
+            
+            <div id="ifCash" style="display: none">
+                    <div class="cashBoxes" id="amtInp">
+                        <label for="cashAmt">Amount Paid:</label>
+                        <span>$ </span><input id="cardNum" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  placeholder="0.00">
+                    </div>
+            
+                    <div class="cashBoxes" id="change">
+                        <button id="make-change" type="button">Make Change</button>
+                    </div>
+                    
+            </div>
+            
+            <div id="ifCard" style="display: none">
+                <div class="cardInfo" id="cardInfo">
+                    <label for="cardNum">Card Number: </label>
+                    <input id="cardNum" maxlength= "19" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  placeholder="Card Number">
+                </div>
+                    
+                <div class="cardInfo" id="cvvExp">
+                    <div id="expDiv">
+                        <label for="exp">EXP</label>
+                        <input id="exp"  type="date" placeholder="EXP">
+                    </div>
+            
+                    <div id="cvvDiv">
+                        <label for="cvv">CVV</label>
+                        <input id="cvv" maxlength= "4" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="CVV">
+                    </div>
+                </div>
+            </div>
+            <div>
+            
+        </div>
+        <button id="subBut" class="btn btn-primary btn-purchase" type="button">Purchase</button>
+        </section>
+    </form>
+    </div>
+    
+    
+        <div id="rec" style="display: none">
+            <div>
+                <h1>Thank you for your purchase!</h1>
+                <h3 class="par" id="recItems">Items Purchased: </h3>  
+                <p class="par" id="recSub">Subtotal: </p>  
+                <p class="par" id="recTax">Tax: </p>  
+                <p class="par" id="recTot">Total: </p>  
+            </div>
+        </div>
     </main>
     <footer></footer>
     <script src="./posTwo.js"></script>

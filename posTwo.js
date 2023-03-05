@@ -140,7 +140,6 @@ const addToCart = (event) => {
         updateTotal()
     })
 
-
     updateTotal()
 }
 const buttons = document.querySelectorAll('.add-to-cart-button');
@@ -195,14 +194,15 @@ cardButton.addEventListener('click', () => {
 });
 purchaseButton.addEventListener('click', () => {
     const receiptForm = document.getElementById('rec');
+    const cartSection = document.getElementById('cart-section');
+
 
     receiptForm.style.display = 'block';
     checkoutPopUp.style.display = 'none';
+    cartSection.style.display = 'none';
 
 
 })
-const purchasedItems = [];
-
 
 
 

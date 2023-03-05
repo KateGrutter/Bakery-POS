@@ -94,6 +94,8 @@ form {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
   }
   
   #cashOrCard {
@@ -119,6 +121,7 @@ form {
   button.btn-purchase {
   
         padding: 10px;
+        margin: 10px;
         border-radius: 10px;
         background-color: #FFA500;
         width: 50%;

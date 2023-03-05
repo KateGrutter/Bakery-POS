@@ -165,10 +165,10 @@ function updateTotal() {
 }
 
 //to open checkout
-
+const checkoutPopUp = document.querySelector('.checkout-popup');
   const checkOutButton = document.getElementById('open-checkout');
   checkOutButton.addEventListener('click', event => {
-    const checkoutPopUp = document.querySelector('.checkout-popup');
+    
     checkoutPopUp.style.display = 'block';
 
   })
@@ -197,9 +197,12 @@ purchaseButton.addEventListener('click', () => {
     const receiptForm = document.getElementById('rec');
 
     receiptForm.style.display = 'block';
+    checkoutPopUp.style.display = 'none';
 
 
 })
+const purchasedItems = [];
+
 
 
 

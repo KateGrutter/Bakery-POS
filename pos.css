@@ -5,12 +5,15 @@
 body {
     background-color: rgb(241, 236, 236);
     margin: 10px;
+    width: 100vw;
+    height: 100vh;
     font-family: 'Source Sans Pro', sans-serif;
 }
 header {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    padding: 10px;
 }
 ul {
     list-style: none;
@@ -38,6 +41,22 @@ a:active {
     display: flex;
     flex-wrap: wrap;
 }
+
+.section-header {
+    border: none;
+    font-size: large;
+    color:white;
+    background-color: orange;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-weight: bold;
+    width: 100%;
+    margin: 10px;
+}
+#all-shop-items {
+    width: 75%;
+}
+
 .individual-shop-item {
     display: flex;
     flex-direction: column;
@@ -63,10 +82,12 @@ button {
     color: white;
     padding: 5px 15px;
     font-weight: bold;
+    cursor: pointer;
     
 }
 .individual-shop-item:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transform: scale(1.2)
 }
 img {
     height: 100px;
@@ -77,6 +98,29 @@ button.checkout-button {
 }
 a.checkout-button {
     color: white;
+}
+#cart-section {
+    background-color: white;
+    border: black solid 1px;
+    margin: 20px;
+    padding: 20px;
+    width: 25%;
+    display: block;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    border-radius: 4px;
+    border: 2px solid orange;
+    background-color: white;
+    height: 200px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition-duration: 0.4s;
 }
 
 /*Bakerycheckout css copied under here */

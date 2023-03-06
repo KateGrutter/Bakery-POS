@@ -199,7 +199,7 @@ const checkoutPopUp = document.querySelector('.checkout-popup');
     
     checkoutPopUp.style.display = 'block';
     const subtotal = document.querySelector('.subtotal-total-price');
-    subtotal.innerText = `${total}`
+    
 
   })
 
@@ -235,6 +235,17 @@ purchaseButton.addEventListener('click', () => {
 
 
 })
+
+//beginning of checkout equations
+//updateTotal() 
+// let total = 0;
+// cart.forEach((item) => (subtotal += item.price * item.quantity));
+//     document.querySelector('.cart-total-price').innerText = `Subtotal: $${subtotal}`;
+//     let salesTax = .06;
+//     let totalPrice = (price * quantity) * (1 + salesTax);
+//     return totalPrice;
+
+
 
 
 

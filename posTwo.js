@@ -127,11 +127,11 @@ const addToCart = (event) => {
     cart.push(grabInventory);
     const cartDiv = document.createElement('div');
     cartDiv.classList.add('cart-item');
+    cartDiv.setAttribute('data-id', grabInventory.id);
     const image = document.createElement('img');
     image.src = grabInventory.image;
     image.classList.add('item-image');
     const titleSpan = document.createElement('span');
-    titleSpan.setAttribute('data-id', grabInventory.id)
     titleSpan.innerText = `${grabInventory.name} x${grabInventory.quantity}`;
     const priceSpan = document.createElement('span');
     priceSpan.innerText = `$${grabInventory.price}`;
@@ -150,7 +150,8 @@ const addToCart = (event) => {
     removeButton.addEventListener('click', (event) => {
         const cartThing = event.target.parentNode;
         cartThing.remove();
-        //cart.filter(item => )
+        const indexRemove = cart.findIndex(item => item.id === cartThing.getAttribute('data-id'));
+        cart.splice(indexRemove, 1);
         updateTotal()
     })
 
@@ -191,19 +192,14 @@ for (let button of buttons){
 // });
 
 
-
-
-
-
-
-
-
 //to open checkout
 const checkoutPopUp = document.querySelector('.checkout-popup');
   const checkOutButton = document.getElementById('open-checkout');
   checkOutButton.addEventListener('click', event => {
     
     checkoutPopUp.style.display = 'block';
+    const subtotal = document.querySelector('.subtotal-total-price');
+    subtotal.innerText = `${total}`
 
   })
 
@@ -237,7 +233,10 @@ purchaseButton.addEventListener('click', () => {
     cartSection.style.display = 'none';
 
 
+
 })
+
+
 
 
 

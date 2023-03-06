@@ -27,7 +27,7 @@ li {
 
 a {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
     padding: .4em;
     text-align: left;
     justify-content: left;
@@ -203,6 +203,7 @@ form {
     header {
         flex-direction: row;
         justify-content: space-between;
+        font-size: 25px;
     }
     main {
         display: flex;
@@ -213,6 +214,11 @@ ul {
     display: flex;
     flex-direction: row;
 
+
+}
+
+a {
+    font-size: 20px;
 }
 
 }

@@ -174,6 +174,16 @@ function updateTotal() {
 
 }
 
+/// begain two write sales tax function need details from group 1st
+
+//function calculateTaxes (price, quantity) 
+//     var salesTax = .06;
+//     total
+
+
+
+// }
+
 
 
 

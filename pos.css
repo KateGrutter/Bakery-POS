@@ -14,9 +14,9 @@ header {
     flex-direction: column;
     margin: 10px;
     padding: 10px;
-    color: rgb(247, 123, 74);
-    font-size: 65px;
-    font-family:cursive;
+    color: rgb(70, 37, 23);
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 ul {
     list-style: none;
@@ -27,6 +27,12 @@ li {
 
 a {
     text-decoration: none;
+    font-size: 40px;
+    padding: .4em;
+    text-align: left;
+    justify-content: left;
+    display: flex;
+    flex-direction: column;
 }
 a:link {
     color:black;
@@ -35,7 +41,7 @@ a:visited {
     color: black;
 }
 a:hover {
-    color:black;
+    color:brown;
 }
 a:active {
     color:black;

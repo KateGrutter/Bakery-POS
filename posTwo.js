@@ -202,6 +202,7 @@ purchaseButton.addEventListener('click', () => {
     cartSection.style.display = 'none';
 
 
+
 })
 
 

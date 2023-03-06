@@ -14,7 +14,7 @@ const inventory = [
         category: 'Cookie',
         name:'Peanut Butter',
         price: 1.00,
-        description: 'Peanut Butter Heaven',
+        description: 'Peanut Butter Paradise',
         id: 'pb',
         image: "assets/priscilla-du-preez--Y-qg-ncD34-unsplash.jpg",
         quantity: 0
@@ -32,7 +32,7 @@ const inventory = [
         category: 'Cookie',
         name: 'White Chocolate',
         price: 1.75,
-        description: 'White Chocolate Wonderfulness',
+        description: 'with Macedamia Nut',
         id: 'w-choc',
         image: "assets/morgane-perraud-XhrW0XlRy8c-unsplash.jpg",
         quantity: 0
@@ -51,7 +51,7 @@ const inventory = [
         category: 'Donuts',
         name: 'Powdered Sugar',
         price: 1.00,
-        description: 'yum',
+        description: 'Yes Please!',
         id: 'pow-sug',
         image: "assets/no-revisions-vUSfCfuq-2Y-unsplash.jpg",
         quantity: 0
@@ -61,7 +61,7 @@ const inventory = [
         category: 'Donuts',
         name: 'Apple Fritter',
         price: 1.50,
-        description: 'Fritter-tastic',
+        description: 'Fritter-tastic!',
         id: 'fritter',
         image: "assets/katherine-sousa-k2UM3jOgmGI-unsplash.jpg",
         quantity: 0
@@ -110,7 +110,7 @@ const inventory = [
         category: 'Pies',
         name: 'Pecan',
         price: 12.00,
-        description: 'You can pecan',
+        description: 'Yes you can pecan!',
         id: 'pecan',
         image: "assets/keighla-exum-wnn9GuvXIZ4-unsplash.jpg",
         quantity: 0

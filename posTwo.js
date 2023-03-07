@@ -218,7 +218,7 @@ const checkoutPopUp = document.querySelector('.checkout-popup');
 
 
     let subTotalPlusTax = total * .06;
-    document.querySelector('.final-total-price').innerText = `$${subTotalPlusTax + total}`
+    document.querySelector('.final-total-price').innerText = `$${Math.round(subTotalPlusTax + total)}`
   })
 
   //BAKERYCHECKOUTJS
@@ -243,9 +243,19 @@ cardButton.addEventListener('click', () => {
 });
 purchaseButton.addEventListener('click', () => {
     const receiptForm = document.getElementById('rec');
-    const cartSection = document.getElementById('cart-section');
+    // const cartSection = document.getElementById('cart-section');
 
 
+    let total = 0;
+    cart.forEach((item) => (total += item.price * item.quantity));
+    document.querySelector('.subPar').innerText = `$${total}`;
+    
+    let subTotal = total;
+    document.querySelector('.taxPar').innerText = `$${subTotal*.06}`;
+
+
+    let subTotalPlusTax = total * .06;
+    document.querySelector('.totPar').innerText = `$${Math.round(subTotalPlusTax + total)}`
     receiptForm.style.display = 'block';
     checkoutPopUp.style.display = 'none';
     cartSection.style.display = 'none';

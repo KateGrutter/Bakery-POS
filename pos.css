@@ -135,12 +135,12 @@ a.checkout-button {
 /*Bakerycheckout css copied under here */
 
 form {
-    border: 10px solid #FFA500;
-    border-style: dotted;
+    border: 2px solid #FFA500;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;
   }
   
   #cashOrCardDiv {

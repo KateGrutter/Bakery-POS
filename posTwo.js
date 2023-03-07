@@ -133,7 +133,7 @@ const addToCart = (event) => {
     const titleSpan = document.createElement('span');
     titleSpan.innerText = `${grabInventory.name} x${grabInventory.quantity}`;
     const priceSpan = document.createElement('span');
-    priceSpan.innerText = `$${grabInventory.price}`;
+    priceSpan.innerText = `$${(grabInventory.price).toFixed(2)}`;
     const removeButton = document.createElement('button');
     removeButton.classList.add('remove-button');
     removeButton.innerText = 'Remove';
@@ -169,7 +169,7 @@ updateTotal()
 function updateTotal() {
     let total = 0;
     cart.forEach((item) => (total += item.price * item.quantity));
-    document.querySelector('.cart-total-price').innerText = `Total: $${total}`;
+    document.querySelector('.cart-total-price').innerText = `Total: $${total.toFixed(2)}`;
 
 }
 
@@ -209,16 +209,14 @@ const checkoutPopUp = document.querySelector('.checkout-popup');
     checkoutPopUp.style.display = 'block';
     let total = 0;
     cart.forEach((item) => (total += item.price * item.quantity));
-    document.querySelector('.subtotal-total-price').innerText = `$${total}`;
+    document.querySelector('.subtotal-total-price').innerText = `$${total.toFixed(2)}`;
     
-    let subTotal = total;
-    document.querySelector('.sales-tax-price').innerText = `$${subTotal*.06}`;
-    Math.round(num*100)/100;
+    let subTotal = total * .06
+    document.querySelector('.sales-tax-price').innerText = `$${subTotal.toFixed(2)}`;
 
-
-
-    let subTotalPlusTax = total * .06;
-    document.querySelector('.final-total-price').innerText = `$${Math.round(subTotalPlusTax + total)}`;
+    
+    let subTotalPlusTax = subTotal
+    document.querySelector('.final-total-price').innerText = `$${(subTotalPlusTax + total).toFixed(2)}`;
     
   });
 

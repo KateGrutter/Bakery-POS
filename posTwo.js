@@ -206,7 +206,7 @@ for (let button of buttons){
 const checkoutPopUp = document.querySelector('.checkout-popup');
   const checkOutButton = document.getElementById('open-checkout');
   checkOutButton.addEventListener('click', event => {
-    
+    cartSection.style.display = 'none';
     checkoutPopUp.style.display = 'block';
     const subtotal = document.querySelector('.subtotal-total-price');
     
@@ -240,7 +240,7 @@ purchaseButton.addEventListener('click', () => {
 
     receiptForm.style.display = 'block';
     checkoutPopUp.style.display = 'none';
-    cartSection.style.display = 'none';
+    // cartSection.style.display = 'none';
 
 
 

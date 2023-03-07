@@ -206,7 +206,7 @@ const checkoutPopUp = document.querySelector('.checkout-popup');
 
   //BAKERYCHECKOUTJS
 
-  const cashButton = document.getElementById('cash');
+const cashButton = document.getElementById('cash');
 const cardButton = document.getElementById('card');
 const purchaseButton = document.getElementById('subBut');
 
@@ -231,16 +231,15 @@ purchaseButton.addEventListener('click', () => {
 
     let total = 0;
     cart.forEach((item) => (total += item.price * item.quantity));
-    document.querySelector('.subPar').innerText = `$${total.toFixed(2)}`;
-    document.querySelector('.subPar').innerText = `Subtotal $${total}`;
+    document.querySelector('.subPar').innerText = `Subtotal: $${total.toFixed(2)}`;
     
-    let subTotal = total;
-    document.querySelector('.taxPar').innerText = `$${subTotal.toFixed(2)}`;
-    document.querySelector('.taxPar').innerText = `Tax $${subTotal*.06}`;
+    let subTotal = total * .06
+    document.querySelector('.taxPar').innerText = `Sales Tax: $${subTotal.toFixed(2)}`;
 
+    
+    let subTotalPlusTax = subTotal
+    document.querySelector('.totPar').innerText = `Total: $${(subTotalPlusTax + total).toFixed(2)}`;
 
-    let subTotalPlusTax = total * .06;
-    document.querySelector('.totPar').innerText = `$${(Math.round(subTotalPlusTax + total).toFixed(2))}`
     receiptForm.style.display = 'block';
     checkoutPopUp.style.display = 'none';
     cartSection.style.display = 'none';

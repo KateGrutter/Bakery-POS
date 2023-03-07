@@ -218,6 +218,21 @@ cashButton.addEventListener('click', () => {
     cardForm.style.display = 'none'
 });
 
+const makeChangeButton = document.getElementById('make-change');
+makeChangeButton.addEventListener('click', event => {
+const cashPaid = document.getElementById('cash-paid').value;
+let total = 0;
+    cart.forEach((item) => (total += item.price * item.quantity));
+    document.querySelector('.subtotal-total-price').innerText = `$${total.toFixed(2)}`;
+let subTotal = total * .06
+    document.querySelector('.sales-tax-price').innerText = `$${subTotal.toFixed(2)}`;
+let subTotalPlusTax = subTotal
+    document.querySelector('.final-total-price').innerText = `$${(subTotalPlusTax + total).toFixed(2)}`;
+    document.getElementById('make-change-return').innerText = `$${((cashPaid) - (subTotalPlusTax + total)).toFixed(2)}`;
+
+
+})
+
 cardButton.addEventListener('click', () => {
     const cardForm = document.getElementById('ifCard');
     const cashForm = document.getElementById('ifCash')

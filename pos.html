@@ -206,12 +206,13 @@
             <div id="ifCash" style="display: none">
                     <div class="cashBoxes" id="amtInp">
                         <label for="cashAmt">Amount Paid:</label>
-                        <span>$ </span><input id="cardNum" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  placeholder="0.00">
+                        <span>$ </span><input id="cash-paid" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  placeholder="0.00">
                     </div>
             
                     <div class="cashBoxes" id="change">
                         <button id="make-change" type="button">Make Change</button>
                     </div>
+                    <div id="make-change-return">Change:</div>
                     
             </div>
             

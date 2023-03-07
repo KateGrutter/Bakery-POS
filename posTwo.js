@@ -7,7 +7,7 @@ const inventory = [
         description: 'The Classic',  /// all descriptions are placeholders for now
         id: 'choc-chip',
         image: src= "assets/food-photographer-jennifer-pallian-OfdDiqx8Cz8-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
     },
     {
         category: 'Cookie',
@@ -16,7 +16,7 @@ const inventory = [
         description: 'Peanut Butter Paradise',
         id: 'pb',
         image: src="assets/priscilla-du-preez--Y-qg-ncD34-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
     },
     {
         category: 'Cookie',
@@ -25,7 +25,7 @@ const inventory = [
         description: 'Double the Decadance',
         id: 'dbl-choc',
         image:src="assets/julissa-capdevilla-HHee8b4ZAlU-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
     },
     {
         category: 'Cookie',
@@ -34,7 +34,7 @@ const inventory = [
         description: 'with Macedamia Nut',
         id: 'w-choc',
         image:src="assets/morgane-perraud-XhrW0XlRy8c-unsplash.jpg",
-        quantity: 0 
+        quantity: 0,
 
     },
     {
@@ -44,7 +44,7 @@ const inventory = [
         description: 'Glazed to Perfection',
         id: 'choc-glazed',
         image:src='https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1664&q=80',
-        quantity: 0
+        quantity: 0,
     },
     {
         category: 'Donuts',
@@ -53,7 +53,7 @@ const inventory = [
         description: 'Yes Please!',
         id: 'pow-sug',
         image: src="assets/no-revisions-vUSfCfuq-2Y-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
 
     },
     {
@@ -63,7 +63,7 @@ const inventory = [
         description: 'Fritter-tastic!',
         id: 'fritter',
         image:src="assets/katherine-sousa-k2UM3jOgmGI-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
         
     },
     {
@@ -82,7 +82,7 @@ const inventory = [
         description: "'Merica",
         id: 'apple',
         image: src="assets/kavya-p-k-zQ4jrYelvLs-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
 
     },
     {
@@ -92,7 +92,7 @@ const inventory = [
         description: 'Very cherry',
         id: 'cherry',
         image: src="assets/marie-g-geri6ml5e2I-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
 
     },
 
@@ -103,7 +103,7 @@ const inventory = [
         description: 'Key to happiness',
         id: 'key',
         image: src="assets/kaouther-djouada-j8ufR4H4PaE-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
     },
     {
         category: 'Pies',
@@ -112,7 +112,7 @@ const inventory = [
         description: 'Yes you can pecan!',
         id: 'pecan',
         image: src="assets/keighla-exum-wnn9GuvXIZ4-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
 
     },
 ]

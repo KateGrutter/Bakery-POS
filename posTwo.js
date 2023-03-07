@@ -205,6 +205,7 @@ for (let button of buttons){
 //to open checkout
 const checkoutPopUp = document.querySelector('.checkout-popup');
   const checkOutButton = document.getElementById('open-checkout');
+  const cartSection = document.getElementById('cart-section');
   checkOutButton.addEventListener('click', event => {
     cartSection.style.display = 'none';
     checkoutPopUp.style.display = 'block';
@@ -240,7 +241,7 @@ purchaseButton.addEventListener('click', () => {
 
     receiptForm.style.display = 'block';
     checkoutPopUp.style.display = 'none';
-    // cartSection.style.display = 'none';
+    cartSection.style.display = 'none';
 
 
 
@@ -248,12 +249,12 @@ purchaseButton.addEventListener('click', () => {
 
 //beginning of checkout equations
 //updateTotal() 
-let total = 0;
-cart.forEach((item) => (subtotal += item.price * item.quantity));
-    document.querySelector('.cart-total-price').innerText = `Subtotal: $${subtotal}`;
-    let salesTax = .06;
-    let totalPrice = (price * quantity) * (1 + salesTax);
-    return totalPrice;
+// let total = 0;
+// cart.forEach((item) => (subtotal += item.price * item.quantity));
+//     document.querySelector('.cart-total-price').innerText = `Subtotal: $${subtotal}`;
+//     let salesTax = .06;
+//     let totalPrice = (price * quantity) * (1 + salesTax);
+//     return totalPrice;
 
 
 

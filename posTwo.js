@@ -6,7 +6,7 @@ const inventory = [
         price: 1.00,
         description: 'The Classic',  /// all descriptions are placeholders for now
         id: 'choc-chip',
-        image: "assets/food-photographer-jennifer-pallian-OfdDiqx8Cz8-unsplash.jpg",
+        image: src= "assets/food-photographer-jennifer-pallian-OfdDiqx8Cz8-unsplash.jpg",
         quantity: 0
     },
     {
@@ -15,7 +15,7 @@ const inventory = [
         price: 1.00,
         description: 'Peanut Butter Paradise',
         id: 'pb',
-        image:"assets/priscilla-du-preez--Y-qg-ncD34-unsplash.jpg",
+        image: src="assets/priscilla-du-preez--Y-qg-ncD34-unsplash.jpg",
         quantity: 0
     },
     {
@@ -24,7 +24,7 @@ const inventory = [
         price: 1.25,
         description: 'Double the Decadance',
         id: 'dbl-choc',
-        image:"assets/julissa-capdevilla-HHee8b4ZAlU-unsplash.jpg",
+        image:src="assets/julissa-capdevilla-HHee8b4ZAlU-unsplash.jpg",
         quantity: 0
     },
     {
@@ -33,7 +33,7 @@ const inventory = [
         price: 1.75,
         description: 'with Macedamia Nut',
         id: 'w-choc',
-        image:"assets/morgane-perraud-XhrW0XlRy8c-unsplash.jpg",
+        image:src="assets/morgane-perraud-XhrW0XlRy8c-unsplash.jpg",
         quantity: 0 
 
     },
@@ -43,7 +43,7 @@ const inventory = [
         price: 1.00,
         description: 'Glazed to Perfection',
         id: 'choc-glazed',
-        image:'https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1664&q=80',
+        image:src='https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1664&q=80',
         quantity: 0
     },
     {
@@ -52,7 +52,7 @@ const inventory = [
         price: 1.00,
         description: 'Yes Please!',
         id: 'pow-sug',
-        image: "assets/no-revisions-vUSfCfuq-2Y-unsplash.jpg",
+        image: src="assets/no-revisions-vUSfCfuq-2Y-unsplash.jpg",
         quantity: 0
 
     },
@@ -62,7 +62,7 @@ const inventory = [
         price: 1.50,
         description: 'Fritter-tastic!',
         id: 'fritter',
-        image: "assets/katherine-sousa-k2UM3jOgmGI-unsplash.jpg",
+        image:src="assets/katherine-sousa-k2UM3jOgmGI-unsplash.jpg",
         quantity: 0
         
     },
@@ -72,7 +72,7 @@ const inventory = [
         price: 1.75,
         description: 'Roll it up',
         id: 'roll',
-        image: "assets/andy-hay-1uaIZcCJ-H0-unsplash.jpg",
+        image: src="assets/andy-hay-1uaIZcCJ-H0-unsplash.jpg",
         quantity: 0
     },
     {
@@ -81,7 +81,7 @@ const inventory = [
         price: 10.00,
         description: "'Merica",
         id: 'apple',
-        image: "assets/kavya-p-k-zQ4jrYelvLs-unsplash.jpg",
+        image: src="assets/kavya-p-k-zQ4jrYelvLs-unsplash.jpg",
         quantity: 0
 
     },
@@ -91,7 +91,7 @@ const inventory = [
         price: 10.00,
         description: 'Very cherry',
         id: 'cherry',
-        image: "assets/marie-g-geri6ml5e2I-unsplash.jpg",
+        image: src="assets/marie-g-geri6ml5e2I-unsplash.jpg",
         quantity: 0
 
     },
@@ -102,7 +102,7 @@ const inventory = [
         price: 12.00,
         description: 'Key to happiness',
         id: 'key',
-        image: "assets/kaouther-djouada-j8ufR4H4PaE-unsplash.jpg",
+        image: src="assets/kaouther-djouada-j8ufR4H4PaE-unsplash.jpg",
         quantity: 0
     },
     {
@@ -111,7 +111,7 @@ const inventory = [
         price: 12.00,
         description: 'Yes you can pecan!',
         id: 'pecan',
-        image: "assets/keighla-exum-wnn9GuvXIZ4-unsplash.jpg",
+        image: src="assets/keighla-exum-wnn9GuvXIZ4-unsplash.jpg",
         quantity: 0
 
     },
@@ -247,14 +247,14 @@ purchaseButton.addEventListener('click', () => {
 
     let total = 0;
     cart.forEach((item) => (total += item.price * item.quantity));
-    document.querySelector('.subPar').innerText = `$${total}`;
+    document.querySelector('.subPar').innerText = `$${total.toFixed(2)}`;
     
     let subTotal = total;
-    document.querySelector('.taxPar').innerText = `$${subTotal*.06}`;
+    document.querySelector('.taxPar').innerText = `$${subTotal.toFixed(2)}`;
 
 
     let subTotalPlusTax = total * .06;
-    document.querySelector('.totPar').innerText = `$${Math.round(subTotalPlusTax + total)}`
+    document.querySelector('.totPar').innerText = `$${(Math.round(subTotalPlusTax + total).toFixed(2))}`
     receiptForm.style.display = 'block';
     checkoutPopUp.style.display = 'none';
     // cartSection.style.display = 'none';

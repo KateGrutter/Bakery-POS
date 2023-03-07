@@ -190,6 +190,7 @@ const checkoutPopUp = document.querySelector('.checkout-popup');
   const cartSection = document.getElementById('cart-section');
   checkOutButton.addEventListener('click', event => {
     
+    cartSection.style.display = 'none'
     checkoutPopUp.style.display = 'block';
     let total = 0;
     cart.forEach((item) => (total += item.price * item.quantity));

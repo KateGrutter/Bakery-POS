@@ -207,11 +207,18 @@ const checkoutPopUp = document.querySelector('.checkout-popup');
   const checkOutButton = document.getElementById('open-checkout');
   const cartSection = document.getElementById('cart-section');
   checkOutButton.addEventListener('click', event => {
-    cartSection.style.display = 'none';
-    checkoutPopUp.style.display = 'block';
-    const subtotal = document.querySelector('.subtotal-total-price');
     
+    checkoutPopUp.style.display = 'block';
+    let total = 0;
+    cart.forEach((item) => (total += item.price * item.quantity));
+    document.querySelector('.subtotal-total-price').innerText = `$${total}`;
+    
+    let subTotal = total;
+    document.querySelector('.sales-tax-price').innerText = `$${subTotal*.06}`;
 
+
+    let subTotalPlusTax = total * .06;
+    document.querySelector('.final-total-price').innerText = `$${subTotalPlusTax + total}`
   })
 
   //BAKERYCHECKOUTJS

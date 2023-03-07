@@ -173,16 +173,6 @@ function updateTotal() {
 
 }
 
-/// begain two write sales tax function need details from group 1st
-
-//function calculateTaxes (price, quantity) 
-//     var salesTax = .06;
-//     total
-
-
-
-// }
-
 
 
 
@@ -192,13 +182,6 @@ for (let button of buttons){
     button.addEventListener('click', addToCart)
 };
 
-//was trying go get it so hovering over shop item causes the description to appear
-
-// const individualShopItem = document.querySelectorAll('.individual-shop-item');
-// individualShopItem.addEventListener('mouseover', () => {
-//     const itemDescription = getElementById('description');
-//     itemDescription.style.display = 'block'
-// });
 
 
 //to open checkout
@@ -248,14 +231,14 @@ purchaseButton.addEventListener('click', () => {
 
     let total = 0;
     cart.forEach((item) => (total += item.price * item.quantity));
-    document.querySelector('.subPar').innerText = `$${total}`;
+    document.querySelector('.subPar').innerText = `Subtotal $${total}`;
     
     let subTotal = total;
-    document.querySelector('.taxPar').innerText = `$${subTotal*.06}`;
+    document.querySelector('.taxPar').innerText = `Tax $${subTotal*.06}`;
 
 
     let subTotalPlusTax = total * .06;
-    document.querySelector('.totPar').innerText = `$${Math.round(subTotalPlusTax + total)}`
+    document.querySelector('.totPar').innerText = `Total $${Math.round(subTotalPlusTax + total)}`
     receiptForm.style.display = 'block';
     checkoutPopUp.style.display = 'none';
     cartSection.style.display = 'none';
@@ -263,15 +246,6 @@ purchaseButton.addEventListener('click', () => {
 
 
 })
-
-//beginning of checkout equations
-//updateTotal() 
-// let total = 0;
-// cart.forEach((item) => (subtotal += item.price * item.quantity));
-//     document.querySelector('.cart-total-price').innerText = `Subtotal: $${subtotal}`;
-//     let salesTax = .06;
-//     let totalPrice = (price * quantity) * (1 + salesTax);
-//     return totalPrice;
 
 
 

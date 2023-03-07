@@ -8,7 +8,6 @@ const inventory = [
         id: 'choc-chip',
         image: "assets/food-photographer-jennifer-pallian-OfdDiqx8Cz8-unsplash.jpg",
         quantity: 0
-        
     },
     {
         category: 'Cookie',
@@ -16,7 +15,7 @@ const inventory = [
         price: 1.00,
         description: 'Peanut Butter Paradise',
         id: 'pb',
-        image: "assets/priscilla-du-preez--Y-qg-ncD34-unsplash.jpg",
+        image:"assets/priscilla-du-preez--Y-qg-ncD34-unsplash.jpg",
         quantity: 0
     },
     {
@@ -25,7 +24,7 @@ const inventory = [
         price: 1.25,
         description: 'Double the Decadance',
         id: 'dbl-choc',
-        image: "assets/julissa-capdevilla-HHee8b4ZAlU-unsplash.jpg",
+        image:"assets/julissa-capdevilla-HHee8b4ZAlU-unsplash.jpg",
         quantity: 0
     },
     {
@@ -34,8 +33,8 @@ const inventory = [
         price: 1.75,
         description: 'with Macedamia Nut',
         id: 'w-choc',
-        image: "assets/morgane-perraud-XhrW0XlRy8c-unsplash.jpg",
-        quantity: 0
+        image:"assets/morgane-perraud-XhrW0XlRy8c-unsplash.jpg",
+        quantity: 0 
 
     },
     {
@@ -44,7 +43,7 @@ const inventory = [
         price: 1.00,
         description: 'Glazed to Perfection',
         id: 'choc-glazed',
-        image: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1664&q=80',
+        image:'https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1664&q=80',
         quantity: 0
     },
     {
@@ -115,7 +114,7 @@ const inventory = [
         image: "assets/keighla-exum-wnn9GuvXIZ4-unsplash.jpg",
         quantity: 0
 
-    }
+    },
 ]
 const cart = [];
 
@@ -134,7 +133,7 @@ const addToCart = (event) => {
     const titleSpan = document.createElement('span');
     titleSpan.innerText = `${grabInventory.name} x${grabInventory.quantity}`;
     const priceSpan = document.createElement('span');
-    priceSpan.innerText = `$${grabInventory.price}`;
+    priceSpan.innerText = `$${(grabInventory.price).toFixed(2)}`;
     const removeButton = document.createElement('button');
     removeButton.classList.add('remove-button');
     removeButton.innerText = 'Remove';
@@ -170,7 +169,7 @@ updateTotal()
 function updateTotal() {
     let total = 0;
     cart.forEach((item) => (total += item.price * item.quantity));
-    document.querySelector('.cart-total-price').innerText = `Total: $${total}`;
+    document.querySelector('.cart-total-price').innerText = `Total: $${total.toFixed(2)}`;
 
 }
 
@@ -211,15 +210,16 @@ const checkoutPopUp = document.querySelector('.checkout-popup');
     checkoutPopUp.style.display = 'block';
     let total = 0;
     cart.forEach((item) => (total += item.price * item.quantity));
-    document.querySelector('.subtotal-total-price').innerText = `$${total}`;
+    document.querySelector('.subtotal-total-price').innerText = `$${total.toFixed(2)}`;
     
-    let subTotal = total;
-    document.querySelector('.sales-tax-price').innerText = `$${subTotal*.06}`;
+    let subTotal = total * .06
+    document.querySelector('.sales-tax-price').innerText = `$${subTotal.toFixed(2)}`;
 
-
-    let subTotalPlusTax = total * .06;
-    document.querySelector('.final-total-price').innerText = `$${Math.round(subTotalPlusTax + total)}`
-  })
+    
+    let subTotalPlusTax = subTotal
+    document.querySelector('.final-total-price').innerText = `$${(subTotalPlusTax + total).toFixed(2)}`;
+    
+  });
 
   //BAKERYCHECKOUTJS
 

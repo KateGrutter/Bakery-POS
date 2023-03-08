@@ -73,7 +73,7 @@ const inventory = [
         description: 'Roll it up',
         id: 'roll',
         image: src="assets/andy-hay-1uaIZcCJ-H0-unsplash.jpg",
-        quantity: 0
+        quantity: 0,
     },
     {
         category: 'Pies',
@@ -147,6 +147,7 @@ const addToCart = (event) => {
     cartItem.append(cartDiv);
 
     removeButton.addEventListener('click', (event) => {
+        grabInventory.quantity = 0;
         const cartThing = event.target.parentNode;
         cartThing.remove();
         const indexRemove = cart.findIndex(item => item.id === cartThing.getAttribute('data-id'));
@@ -156,9 +157,10 @@ const addToCart = (event) => {
 
 } else {
     existingCartItem.quantity++;
-    const existingHTML = document.querySelector(`[data-id=${existingCartItem.id}]`);
+    const existingHTML = document.querySelector(`[data-id=${existingCartItem.id}] span`);
+    console.log(existingHTML);
     existingHTML.innerText = `${existingCartItem.name} x${existingCartItem.quantity}`
-    console.log(existingHTML)
+    //console.log(existingHTML)
 }
 
 

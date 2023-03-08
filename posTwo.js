@@ -188,7 +188,7 @@ for (let button of buttons){
 
 //to open checkout
 const checkoutPopUp = document.querySelector('.checkout-popup');
-  const checkOutButton = document.getElementById('open-checkout');
+  const checkOutButton = document.querySelector('.open-checkout');
   const cartSection = document.getElementById('cart-section');
   checkOutButton.addEventListener('click', event => {
     

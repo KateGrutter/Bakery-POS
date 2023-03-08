@@ -41,7 +41,8 @@ a:visited {
     color: black;
 }
 a:hover {
-    color:brown;
+    color:#bcbb9e
+    ;
 }
 a:active {
     color:black;
@@ -59,11 +60,23 @@ a:active {
     border-radius: 5px;
     padding: 5px 15px;
     font-weight: bold;
-    width: 100%;
     margin: 10px;
 }
 #all-shop-items {
     width: 75%;
+}
+#shop-name {
+    font-family: 'Dancing Script', cursive;
+}
+#logo {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+img #logo-image {
+    height: 75px;
+    width: 75px;
 }
 
 .individual-shop-item {
@@ -100,20 +113,27 @@ button {
 }
 img {
     height: 100px;
-    width: 100px;
+    width: 125px;
+}
+img.logo-image {
+    height: 75px;
+    width: 75px;
 }
 button.checkout-button {
     color: white;
+    padding-top: 10px;
+    margin-top: 10px;
+    width: auto;
 }
 a.checkout-button {
     color: white;
 }
 #cart-section {
-    background-color: white;
-    border: black solid 1px;
-    margin: 20px;
-    padding: 20px;
-    width: 25%;
+    /* background-color: white;
+    border: black solid 1px; */
+    margin: 10px;
+    padding: 10px;
+    width: auto;
     display: block;
 }
 
@@ -128,8 +148,19 @@ a.checkout-button {
     width: 150px;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
     transition-duration: 0.4s;
+}
+.cart-section-header {
+    margin: 10px;
+}
+.shop-item-description {
+    font-size: small;
+    color: rgb(87, 85, 85);
+}
+.popup-section-header {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -192,7 +223,7 @@ form {
   .checkout-popup {
     display: none;
     position: fixed;
-    bottom: 10px;
+    top: 108px;
     right: 30px;
     height: 350px;
     width: 350px;
@@ -220,6 +251,17 @@ ul {
 
 a {
     font-size: 20px;
+}
+main {
+    width: 100vw;
+}
+#all-shop-items {
+    width: 66%;
+}
+#cart-section {
+    width: 33%;
+    margin: 15px;
+    padding: 15px;
 }
 
 }

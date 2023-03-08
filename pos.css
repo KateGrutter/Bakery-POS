@@ -9,6 +9,7 @@ body {
     height: 100vh;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
 header {
     display: flex;
     flex-direction: column;
@@ -21,7 +22,7 @@ header {
 ul {
     list-style: none;
 }
-li {
+nav {
     padding: 3px;
     font-family: 'Dancing Script', cursive;
 }
@@ -62,6 +63,7 @@ a:active {
     padding: 5px 15px;
     font-weight: bold;
     margin: 10px;
+    width: 100%
 }
 #all-shop-items {
     width: 75%;
@@ -112,6 +114,11 @@ button {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     transform: scale(1.2)
 }
+
+.shop-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 img {
     height: 100px;
     width: 125px;
@@ -129,8 +136,8 @@ a.checkout-button {
     color: white;
 }
 #cart-section {
-    /* background-color: white;
-    border: black solid 1px; */
+    background-color: white;
+    border: black solid 1px;
     margin: 10px;
     padding: 10px;
     width: auto;
@@ -181,6 +188,7 @@ form {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 10px;
+    width:200px
   }
   
   #cashOrCard {
@@ -191,14 +199,14 @@ form {
     
   #ifCash {
       border: 1px solid black;
-      width: 80%;
+      width: 100%;
       padding: 5px;
       margin-top: 10px;
   }
    
   #ifCard {
         border: 1px solid black;
-        width: 80%;
+        width: 100%;
         padding: 5px;
         margin-top: 10px;
   }
@@ -209,24 +217,33 @@ form {
         margin: 10px;
         border-radius: 10px;
         background-color: #FFA500;
-        width: 50%;
+        width: 100%;
   }
     
   #rec {
       color: black;
-      padding: 10%;
+      padding: 30px;
       border: 5px solid #FFA500;
       margin: 10px;
       display: block;
+      background-color: white;
       height: 50vh;
   }
   .checkout-popup {
     display: none;
     position: fixed;
     top: 108px;
-    right: 30px;
     height: 350px;
     width: 350px;
+    
+  }
+  #purchased-items-container{
+    border: black solid 1px;
+    padding: 10px;
+  }
+  .purchased-items{
+    list-style-type: none;
+    padding-bottom: 5px;
     
   }
 
@@ -256,6 +273,11 @@ a {
 main {
     width: 100vw;
 }
+
+.section-header{
+    width: auto;
+}
+
 #all-shop-items {
     width: 66%;
 }
@@ -264,5 +286,13 @@ main {
     margin: 15px;
     padding: 15px;
 }
+.shop-items{
+    display: flex;
+    flex-shrink: inherit;
+    /* flex-direction: row; */
+}
 
+.checkout-popup{
+    right: 30px;
+}
 }

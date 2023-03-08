@@ -193,7 +193,7 @@ const checkoutPopUp = document.querySelector('.checkout-popup');
   checkOutButton.addEventListener('click', event => {
     
     cartSection.style.display = 'none'
-    checkoutPopUp.style.display = 'block';
+    checkoutPopUp.style.display = 'flex';
     let total = 0;
     cart.forEach((item) => (total += item.price * item.quantity));
     document.querySelector('.subtotal-total-price').innerText = `$${total.toFixed(2)}`;
@@ -250,7 +250,8 @@ purchaseButton.addEventListener('click', () => {
     let itemsPurchased = document.getElementById('purchased-items-container');
     for (let item of cart) {
         const li = document.createElement('li');
-        li.innerText = `${item.name} ${item.price} ${item.quantity}`;
+        li.classList.add('purchased-items')
+        li.innerText = `${item.name} $${item.price} x${item.quantity}`;
         itemsPurchased.append(li);
     }
 

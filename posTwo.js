@@ -244,7 +244,15 @@ cardButton.addEventListener('click', () => {
 });
 purchaseButton.addEventListener('click', () => {
     const receiptForm = document.getElementById('rec');
+
     // const cartSection = document.getElementById('cart-section');
+
+    let itemsPurchased = document.getElementById('purchased-items-container');
+    for (let item of cart) {
+        const li = document.createElement('li');
+        li.innerText = `${item.name} ${item.price} ${item.quantity}`;
+        itemsPurchased.append(li);
+    }
 
 
     let total = 0;
@@ -257,6 +265,7 @@ purchaseButton.addEventListener('click', () => {
     
     let subTotalPlusTax = subTotal
     document.querySelector('.totPar').innerText = `Total: $${(subTotalPlusTax + total).toFixed(2)}`;
+
 
     receiptForm.style.display = 'block';
     checkoutPopUp.style.display = 'none';

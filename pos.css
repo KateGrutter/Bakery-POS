@@ -23,6 +23,7 @@ ul {
 }
 li {
     padding: 3px;
+    font-family: 'Dancing Script', cursive;
 }
 
 a {
@@ -119,11 +120,10 @@ img.logo-image {
     height: 75px;
     width: 75px;
 }
-button.checkout-button {
+button.open-checkout {
     color: white;
-    padding-top: 10px;
+    padding: 5px 20px;
     margin-top: 10px;
-    width: auto;
 }
 a.checkout-button {
     color: white;
@@ -239,7 +239,8 @@ form {
     }
     main {
         display: flex;
-        ;
+        flex-direction: row;
+        align-items: baseline;
     }
 ul {
     list-style: none;

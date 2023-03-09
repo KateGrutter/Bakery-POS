@@ -231,9 +231,13 @@ let subTotal = total * .06
 let subTotalPlusTax = subTotal
     document.querySelector('.final-total-price').innerText = `$${(subTotalPlusTax + total).toFixed(2)}`;
     document.getElementById('make-change-return').innerText = `$${((cashPaid) - (subTotalPlusTax + total)).toFixed(2)}`;
+    if (((cashPaid) - (subTotalPlusTax + total)).toFixed(2) < 0) {
+        alert('The amount paid was not enough.');
+    }
 
 
-})
+});
+
 
 cardButton.addEventListener('click', () => {
     const cardForm = document.getElementById('ifCard');
@@ -251,7 +255,7 @@ purchaseButton.addEventListener('click', () => {
     for (let item of cart) {
         const li = document.createElement('li');
         li.classList.add('purchased-items')
-        li.innerText = `${item.name} $${item.price} x${item.quantity}`;
+        li.innerText = `${item.name} $${item.price} x ${item.quantity}`;
         itemsPurchased.append(li);
     }
 

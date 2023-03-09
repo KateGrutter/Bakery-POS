@@ -228,6 +228,7 @@ form {
       display: block;
       background-color: white;
       height: 50vh;
+      
   }
   .checkout-popup {
     display: none;
@@ -244,6 +245,7 @@ form {
   .purchased-items{
     list-style-type: none;
     padding-bottom: 5px;
+    
     
   }
 
@@ -294,5 +296,9 @@ main {
 
 .checkout-popup{
     right: 30px;
+}
+
+#rec{
+    float: right;
 }
 }

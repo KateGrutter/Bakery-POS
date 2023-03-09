@@ -224,18 +224,18 @@
             <div id="ifCard" style="display: none">
                 <div class="cardInfo" id="cardInfo">
                     <label for="cardNum">Card Number: </label>
-                    <input id="cardNum" maxlength= "19" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  placeholder="Card Number">
+                    <input class='card-input' id="cardNum" maxlength= "19" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  placeholder="Card Number">
                 </div>
                     
                 <div class="cardInfo" id="cvvExp">
                     <div id="expDiv">
                         <label for="exp">EXP</label>
-                        <input id="exp"  type="date" placeholder="EXP">
+                        <input class="card-input" id="exp"  type="date" placeholder="EXP">
                     </div>
             
                     <div id="cvvDiv">
                         <label for="cvv">CVV</label>
-                        <input id="cvv" maxlength= "4" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="CVV">
+                        <input class="card-input" id="cvv" maxlength= "4" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" placeholder="CVV">
                     </div>
                 </div>
             </div>

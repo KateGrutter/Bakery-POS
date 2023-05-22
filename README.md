@@ -4,7 +4,7 @@ Bakery-POS is a point-of-sale website for the bakery "Flour Power"
 
 ## Screenshot
 
-![TheVillage Screenshot](./assets/BakeryPOSScreenshot.png)
+![Bakery-POS](./assets/BakeryPOSScreenshot.png)
 
 ## Task
 
